@@ -7,7 +7,7 @@ export default function Home() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/posts").then((res) => setPosts(res.data));
+    axios.get("https://launchmytech.onrender.com/api/posts").then((res) => setPosts(res.data));
   }, []);
 
   return (
