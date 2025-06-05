@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./EditPost.css"; // 👈 Add this line
+import "./EditPost.css";
 
 const EditPost = () => {
   const { id } = useParams();
@@ -15,7 +15,7 @@ const EditPost = () => {
       navigate("/login");
       return;
     }
-    axios.get(`http://localhost:5000/api/posts`).then((res) => {
+    axios.get(`https://launchmytech.onrender.com/api/posts`).then((res) => {
       const post = res.data.find((p) => p._id === id);
       if (!post) {
         alert("Post not found");
@@ -38,7 +38,7 @@ const EditPost = () => {
     }
     try {
       await axios.put(
-        `http://localhost:5000/api/posts/${id}`,
+        `https://launchmytech.onrender.com/api/posts/${id}`,
         { title, content, image },
         { headers: { Authorization: token } }
       );
