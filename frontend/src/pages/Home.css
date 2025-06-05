@@ -1,0 +1,66 @@
+/* frontend/src/pages/Home.css */
+
+
+
+/* Container for entire blog page */
+.home-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff; /* Card-like white background for content */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.home-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.posts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.post-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+}
+
+.post-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.post-content {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.post-date {
+  font-size: 0.9rem;
+  color: #888;
+}
