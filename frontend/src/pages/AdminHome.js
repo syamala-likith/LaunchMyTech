@@ -18,7 +18,7 @@ const AdminHome = () => {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/posts");
+      const res = await axios.get("https://launchmytech.onrender.com/api/posts");
       setPosts(res.data);
     } catch (err) {
       console.error("Failed to fetch posts", err);
@@ -39,7 +39,7 @@ const AdminHome = () => {
     }
     try {
       await axios.post(
-        "http://localhost:5000/api/posts/create",
+        "https://launchmytech.onrender.com/api/posts/create",
         { title, content, image },
         { headers: { Authorization: token } }
       );
@@ -60,7 +60,7 @@ const AdminHome = () => {
       return;
     }
     try {
-      await axios.delete(`http://localhost:5000/api/posts/${id}`, {
+      await axios.delete(`https://launchmytech.onrender.com/api/posts/${id}`, {
         headers: { Authorization: token },
       });
       fetchPosts();
